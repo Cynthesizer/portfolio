@@ -16,3 +16,10 @@ img.sticky {
   bottom: 0;
   width:100%;
 }
+
+@media only screen and (max-device-width: 480px) {
+  img.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+  }}
