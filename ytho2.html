@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3 id="head">What is your (people) problem?</h3>
+
+<input type="text" id="problem" value="tell me...">
+
+<button id="go" onclick="myFunction()">Go!</button>
+
+
+<p id="ans"></p>
+<p id="ans1"></p>
+<p id="ans2"></p>
+<p id="ans3"></p>
+<p id="ans4"></p>
+<p id="ans5"></p>
+<p id="ans6"></p>
+<p id="ins"></p>
+<p id="btn"></p>
+
+
+<script>
+
+function myFunction() {
+  addInput();
+  newButton();
+  var x = document.getElementById("problem").value;
+  document.getElementById("ans").innerHTML = x;
+
+  problem.style.display = "none";
+  problem.remove();
+
+  head.remove();
+  go.remove();
+}
+
+function myFunction2() {
+  addText2()
+  var x = document.getElementById("field2")
+    x.value= "why tho?"
+}
+
+
+function newButton() {
+  var butts = document.createElement("button");
+  butts.innerHTML = "Submit!";
+  butts.setAttribute("id", "ybtn");
+
+  var puthere = document.getElementById("btn");
+  puthere.appendChild(butts);
+
+  butts.addEventListener ("click", function() {
+    myFunction2();
+    
+    
+  });
+
+}
+
+
+function addInput() {
+  var u = document.createElement("INPUT");
+  u.setAttribute("type", "text");
+  u.setAttribute("id", "field2");
+  u.setAttribute("value", "but why tho?");
+
+  var field = document.getElementById("ins");
+  field.appendChild(u);
+
+
+  // document.body.appendChild(u);
+
+}
+
+function addText(){
+  var x = document.getElementById("problem").value;
+  document.getElementById("ans").innerHTML = x;
+}
+
+ugh = 0 
+thisarr = ["ans1","ans2","ans3","ans4","ans5"]
+function addText2(){
+  var o = document.getElementById("field2").value;
+  document.getElementById(thisarr[ugh]).innerHTML = o; 
+  ugh = ugh+1
+
+  if (ugh == 5){
+    
+    var testies = document.getElementById("ans").textContent;
+    var reasons = document.getElementById("ans5").textContent;
+    
+    document.getElementById("ans6").innerHTML = testies + " because " + reasons; 
+    document.getElementById("ybtn").remove()
+    document.getElementById("field2").remove()
+  } 
+
+}
+</script>
+
+
+
+</body>
+</html>
